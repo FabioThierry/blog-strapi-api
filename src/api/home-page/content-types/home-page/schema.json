@@ -23,7 +23,8 @@
       "components": [
         "layout.hero-section",
         "shared.slider",
-        "layout.about-section"
+        "layout.about-section",
+        "components.video"
       ]
     }
   }

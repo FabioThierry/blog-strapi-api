@@ -12,6 +12,18 @@ export interface ComponentsLink extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsVideo extends Struct.ComponentSchema {
+  collectionName: 'components_components_videos';
+  info: {
+    displayName: 'Video';
+  };
+  attributes: {
+    thumbnailSrc: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    videoSrc: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutAboutSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_about_sections';
   info: {
@@ -108,6 +120,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'components.link': ComponentsLink;
+      'components.video': ComponentsVideo;
       'layout.about-section': LayoutAboutSection;
       'layout.hero-section': LayoutHeroSection;
       'shared.cards': SharedCards;
