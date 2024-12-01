@@ -505,6 +505,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
 export interface ApiGameGame extends Struct.CollectionTypeSchema {
   collectionName: 'games';
   info: {
+    description: '';
     displayName: 'Game';
     pluralName: 'games';
     singularName: 'game';
@@ -525,6 +526,7 @@ export interface ApiGameGame extends Struct.CollectionTypeSchema {
     main_information: Schema.Attribute.Component<'shared.rich-text', false>;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
