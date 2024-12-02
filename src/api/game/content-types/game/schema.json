@@ -40,7 +40,9 @@
       "component": "shared.rich-text"
     },
     "slug": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }

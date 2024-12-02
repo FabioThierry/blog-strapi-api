@@ -526,7 +526,9 @@ export interface ApiGameGame extends Struct.CollectionTypeSchema {
     main_information: Schema.Attribute.Component<'shared.rich-text', false>;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.String;
+    slug: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
